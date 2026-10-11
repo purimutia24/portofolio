@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puri Retno Mutia — Backend Developer Portfolio</title>
+  <meta name="description" content="Portofolio resmi Puri Retno Mutia. Mahasiswi D3 Teknik Informatika PENS, Backend Developer berfokus pada Python (FastAPI), Node.js, REST API, RBAC, dan Database.">
+
+  <!-- Favicon placeholder with SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231b99d5'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='46' fill='white'>PRM</text></svg>">
+
+  <!-- Google Fonts: Space Grotesk & Instrument Sans / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+  <!-- Navbar -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#top" class="brand-logo" title="Puri Retno Mutia">
+        <div class="brand-badge-icon">
+          <span>PR</span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">Puri Retno Mutia</span>
+          <span class="brand-subtitle">Backend Developer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Navigasi Utama">
+        <a href="#about" class="nav-item">Tentang</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#projects" class="nav-item">Proyek</a>
+        <a href="#experience" class="nav-item">Pengalaman</a>
+        <a href="#education" class="nav-item">Pendidikan</a>
+        <a href="#contact" class="btn-nav-cta">Hubungi Saya</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-toggle" class="mobile-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Nav -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="mobile-drawer-links">
+        <a href="#about" class="mobile-nav-item">Tentang</a>
+        <a href="#skills" class="mobile-nav-item">Skills</a>
+        <a href="#projects" class="mobile-nav-item">Proyek</a>
+        <a href="#experience" class="mobile-nav-item">Pengalaman</a>
+        <a href="#education" class="mobile-nav-item">Pendidikan</a>
+        <a href="#contact" class="btn-mobile-cta">Hubungi Saya</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section with Interactive Canvas -->
+    <section class="hero-section">
+      <!-- Ambient Glow Overlays -->
+      <div class="ambient-glow" aria-hidden="true"></div>
+      
+      <!-- Interactive Constellation Canvas like LamonganDev -->
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-content">
+        <div class="hero-text-wrap">
+          <div class="eyebrow-pill">
+            <span class="status-indicator"></span>
+            <span class="eyebrow-text">D3 TEKNIK INFORMATIKA PENS • BACKEND DEVELOPER</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Membangun arsitektur backend yang <span class="gradient-text">terstruktur, aman, & andal.</span>
+          </h1>
+
+          <p class="hero-description">
+            Fokus pada perancangan logika server, integrasi REST API berkinerja tinggi menggunakan Python (FastAPI) & Node.js, proteksi hak akses (RBAC), serta pemodelan basis data yang tangguh.
+          </p>
+
+          <div class="hero-btn-group">
+            <a href="#projects" class="btn-brand-primary">
+              <span>Lihat Proyek Pilihan</span>
+              <svg class="icon-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-brand-secondary">
+              Hubungi Saya
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dark Stats & Highlights Strip -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-box reveal delay-100">
+            <div class="stat-number">2+</div>
+            <p class="stat-label">Sistem Backend Selesai</p>
+          </div>
+          <div class="stat-box reveal delay-200">
+            <div class="stat-number">100%</div>
+            <p class="stat-label">Fokus API & Basis Data</p>
+          </div>
+          <div class="stat-box reveal delay-300">
+            <div class="stat-number">RBAC</div>
+            <p class="stat-label">Keamanan Akses Teruji</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-intro reveal reveal-left">
+            <p class="section-eyebrow">TENTANG SAYA</p>
+            <h2 class="section-title">Dedikasi pada sistem di balik layar aplikasi.</h2>
+            <p class="about-body-text">
+              Saya adalah mahasiswi D3 Teknik Informatika di <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong> yang memfokuskan perjalanan teknisnya pada bidang <strong>Backend Development</strong>. Saya selalu tertarik pada bagaimana data dialirkan, diproses, dan disimpan secara konsisten agar layanan web berjalan dengan stabil dan aman.
+            </p>
+            <p class="about-body-text mt-3">
+              Dalam implementasinya, saya terbiasa memanfaatkan <strong>Python (FastAPI)</strong>, <strong>Node.js</strong>, dan <strong>PHP</strong>, serta mengelola basis data relasional (<strong>MySQL</strong>, <strong>PostgreSQL</strong>) maupun NoSQL (<strong>MongoDB</strong>). Saya menyukai tantangan menyelesaikan masalah keamanan otorisasi serta menjaga kerapian kode lewat pemisahan arsitektur seperti MVC.
+            </p>
+          </div>
+
+          <!-- Cards on the right: Fokus & Pendekatan -->
+          <div class="about-cards-col">
+            <article class="clean-card reveal reveal-right delay-150">
+              <span class="card-eyebrow text-sky">TARGET PERAN</span>
+              <h3 class="card-title">Backend Developer / Software Engineer</h3>
+              <p class="card-desc">
+                Siap berkontribusi dalam perancangan arsitektur server, penyediaan kontrak RESTful API yang jelas, dan optimasi query basis data.
+              </p>
+            </article>
+
+            <article class="clean-card reveal reveal-right delay-300">
+              <span class="card-eyebrow text-emerald">PRINSIP TEKNIS</span>
+              <h3 class="card-title">Keamanan & Kerapian Kode</h3>
+              <ul class="checklist">
+                <li>
+                  <span class="check-dot"></span>
+                  <span>Implementasi kontrol akses spesifik dengan Role-Based Access Control (RBAC).</span>
+                </li>
+                <li>
+                  <span class="check-dot"></span>
+                  <span>Struktur kode modular dan maintainable dengan pola arsitektur MVC.</span>
+                </li>
+                <li>
+                  <span class="check-dot"></span>
+                  <span>Perancangan skema relasional terstandar dan pengujian respons API sebelum integrasi frontend.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header-center reveal">
+          <p class="section-eyebrow">KEAHLIAN TEKNIS</p>
+          <h2 class="section-title">Teknologi & Fondasi Backend</h2>
+          <p class="section-subtitle">Kumpulan bahasa pemrograman, framework, dan basis data yang saya kuasai dan gunakan.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1 -->
+          <article class="feature-card reveal delay-100">
+            <span class="feature-card-num">01</span>
+            <h3 class="feature-card-title">Programming Languages</h3>
+            <p class="feature-card-desc">Bahasa utama yang saya gunakan untuk membangun logika komputasi server dan skrip pengolahan data.</p>
+            <div class="tags-container">
+              <span class="tag-badge">Python</span>
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">PHP</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="feature-card reveal delay-200">
+            <span class="feature-card-num">02</span>
+            <h3 class="feature-card-title">Backend & Frameworks</h3>
+            <p class="feature-card-desc">Framework modern yang saya manfaatkan untuk membangun layanan web asinkron yang cepat dan ringan.</p>
+            <div class="tags-container">
+              <span class="tag-badge">FastAPI</span>
+              <span class="tag-badge">Node.js</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="feature-card reveal delay-300">
+            <span class="feature-card-num">03</span>
+            <h3 class="feature-card-title">Database Management</h3>
+            <p class="feature-card-desc">Pengelolaan persistensi data baik yang terstruktur secara relasional maupun fleksibel pada dokumen NoSQL.</p>
+            <div class="tags-container">
+              <span class="tag-badge">MySQL</span>
+              <span class="tag-badge">PostgreSQL</span>
+              <span class="tag-badge">MongoDB</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="feature-card reveal delay-400">
+            <span class="feature-card-num">04</span>
+            <h3 class="feature-card-title">API & Architecture</h3>
+            <p class="feature-card-desc">Standarisasi komunikasi antar layanan serta mekanisme pembatasan izin keamanan hak akses.</p>
+            <div class="tags-container">
+              <span class="tag-badge">REST API</span>
+              <span class="tag-badge">RBAC Security</span>
+              <span class="tag-badge">MVC Pattern</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header-flex reveal">
+          <div>
+            <p class="section-eyebrow">BUKTI KARYA</p>
+            <h2 class="section-title">Proyek Portofolio</h2>
+            <p class="section-subtitle">Implementasi riil dari rancangan database, endpoint API, dan sistem keamanan.</p>
+          </div>
+          <div class="projects-badge-tag">
+            <span>2 Proyek Tersedia</span>
+          </div>
+        </div>
+
+        <div class="projects-container">
+          <!-- Featured Project 1: SIMPONI -->
+          <article class="project-showcase featured-project reveal reveal-scale">
+            <div class="showcase-header">
+              <div class="showcase-title-area">
+                <span class="featured-label">Featured Backend Project</span>
+                <h3 class="showcase-title">SIMPONI – Sistem Informasi Pelaporan</h3>
+                <span class="showcase-role">Peran: Backend Developer</span>
+              </div>
+            </div>
+
+            <p class="showcase-summary">
+              Aplikasi pelaporan dan pelacakan berbasis web yang mengimplementasikan sistem keamanan pembatasan hak akses secara spesifik untuk penggunanya guna mencegah kebocoran data antar departemen.
+            </p>
+
+            <div class="showcase-content-grid">
+              <div class="case-card">
+                <span class="case-title">Problem</span>
+                <p>Proses pelaporan sebelumnya tidak memiliki pembatasan hak akses yang jelas sehingga rentan terhadap kebocoran data sensitif antar departemen.</p>
+              </div>
+
+              <div class="case-card">
+                <span class="case-title">Solution</span>
+                <p>Membangun sistem terpusat dengan autentikasi Role-Based Access Control (RBAC) agar dokumen hanya bisa diakses dan digenerate oleh peran yang berwenang.</p>
+              </div>
+
+              <div class="case-card full-width">
+                <span class="case-title">Kontribusi Saya & Alur Pengerjaan</span>
+                <p>Merancang struktur tabel dan relasi pada basis data MySQL, menulis endpoint REST API menggunakan framework modern FastAPI, mengonfigurasi dependensi keamanan RBAC, dan melakukan pengujian respons API sebelum diintegrasikan dengan frontend React.</p>
+              </div>
+
+              <div class="case-card full-width result-card">
+                <span class="case-title text-emerald">Hasil Implementasi</span>
+                <p>Sistem backend berhasil terintegrasi dengan frontend React, mampu melayani request secara aman, dan menghasilkan dokumen otomatis sesuai peran pengguna.</p>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="tech-pills-wrap">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">RBAC Auth</span>
+                <span class="tech-pill">React (Integrasi)</span>
+              </div>
+              <div class="repo-links">
+                <span class="placeholder-tag">GitHub: [Belum diisi]</span>
+                <span class="placeholder-tag">Demo: [Belum diisi]</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: CRUD MongoDB -->
+          <article class="project-showcase reveal reveal-scale delay-150">
+            <div class="showcase-header">
+              <div class="showcase-title-area">
+                <h3 class="showcase-title">CRUD MongoDB (Arsitektur MVC)</h3>
+                <span class="showcase-role">Peran: Backend Developer</span>
+              </div>
+            </div>
+
+            <p class="showcase-summary">
+              Aplikasi backend untuk mengelola operasi dasar basis data pada lingkungan NoSQL menggunakan pendekatan arsitektur Model-View-Controller (MVC) agar basis kode rapi dan modular.
+            </p>
+
+            <div class="showcase-content-grid">
+              <div class="case-card">
+                <span class="case-title">Problem</span>
+                <p>Membutuhkan pengelolaan data yang fleksibel tanpa skema tabel SQL kaku, namun struktur kode backend harus tetap rapi dan mudah di-maintain.</p>
+              </div>
+
+              <div class="case-card">
+                <span class="case-title">Solution</span>
+                <p>Mengembangkan server aplikasi menggunakan Node.js dan MongoDB, serta memisahkan logika aplikasi ke dalam direktori Controller, Model, dan Routes.</p>
+              </div>
+
+              <div class="case-card full-width">
+                <span class="case-title">Kontribusi Saya & Alur Pengerjaan</span>
+                <p>Melakukan inisiasi project Node.js, menyusun arsitektur direktori kerja (MVC) pada sisi server, membuat routing data, dan mengatur koneksi ke database NoSQL MongoDB.</p>
+              </div>
+
+              <div class="case-card full-width result-card">
+                <span class="case-title text-emerald">Hasil Implementasi</span>
+                <p>Terciptanya server backend Node.js yang ringan dan efisien untuk mengelola manipulasi data dokumen pada MongoDB secara langsung.</p>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="tech-pills-wrap">
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">MongoDB</span>
+                <span class="tech-pill">MVC Architecture</span>
+              </div>
+              <div class="repo-links">
+                <span class="placeholder-tag">GitHub: [Belum diisi]</span>
+                <span class="placeholder-tag">Demo: [Belum diisi]</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="exp-edu-section">
+      <div class="container">
+        <div class="exp-edu-grid">
+          <!-- Experience Column -->
+          <div class="reveal reveal-left">
+            <p class="section-eyebrow">REKAM JEJAK</p>
+            <h2 class="section-title">Pengalaman Proyek</h2>
+            <div class="timeline-container">
+              <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-info">
+                  <span class="timeline-badge">Akademik / Tim</span>
+                  <h3 class="timeline-heading">Backend Developer — SIMPONI</h3>
+                  <p class="timeline-desc">
+                    Bertanggung jawab merancang struktur relasi MySQL, mengembangkan API terproteksi RBAC dengan FastAPI, dan memvalidasi payload bersama pengembang frontend.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-info">
+                  <span class="timeline-badge">Akademik</span>
+                  <h3 class="timeline-heading">Backend Developer — Node.js & MongoDB</h3>
+                  <p class="timeline-desc">
+                    Membangun struktur kode server berbasis Model-View-Controller (MVC) untuk operasi CRUD dokumen NoSQL yang efisien dan modular.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div id="education" class="reveal reveal-right delay-200">
+            <p class="section-eyebrow">PENDIDIKAN</p>
+            <h2 class="section-title">Latar Belakang Studi</h2>
+            <div class="edu-card">
+              <div class="edu-header">
+                <div class="edu-avatar">
+                  <span>PENS</span>
+                </div>
+                <div>
+                  <h3 class="edu-school">Politeknik Elektronika Negeri Surabaya</h3>
+                  <p class="edu-program">D3 Teknik Informatika</p>
+                </div>
+              </div>
+              <div class="edu-body">
+                <p>Fokus pembelajaran mencakup Rekayasa Perangkat Lunak, Manajemen & Pemodelan Basis Data, Algoritma Pemrograman, dan Arsitektur Backend Web.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner (LamonganDev gradient banner style) -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card reveal reveal-scale">
+          <h2 class="cta-banner-title">Tertarik Berkolaborasi atau Merekrut?</h2>
+          <p class="cta-banner-desc">
+            Saya terbuka untuk kesempatan magang, posisi junior backend developer, maupun proyek kolaboratif pengembangan web.
+          </p>
+          <a href="#contact" class="btn-banner-action">
+            Mulai Terhubung
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header-center reveal">
+          <p class="section-eyebrow">HUBUNGI SAYA</p>
+          <h2 class="section-title">Saluran Komunikasi</h2>
+          <p class="section-subtitle">Silakan hubungi saya melalui jalur resmi di bawah ini.</p>
+        </div>
+
+        <div class="contact-cards-grid">
+          <div class="contact-box reveal delay-100">
+            <div class="contact-icon-bubble">✉️</div>
+            <span class="contact-label">EMAIL</span>
+            <span class="contact-val">[Belum diisi]</span>
+          </div>
+
+          <div class="contact-box reveal delay-200">
+            <div class="contact-icon-bubble">💼</div>
+            <span class="contact-label">LINKEDIN</span>
+            <span class="contact-val">[Belum diisi]</span>
+          </div>
+
+          <div class="contact-box reveal delay-300">
+            <div class="contact-icon-bubble">🐙</div>
+            <span class="contact-label">GITHUB</span>
+            <span class="contact-val">[Belum diisi]</span>
+          </div>
+
+          <div class="contact-box reveal delay-400">
+            <div class="contact-icon-bubble">📍</div>
+            <span class="contact-label">DOMISILI</span>
+            <span class="contact-val">Surabaya, Indonesia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (LamonganDev clean style) -->
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div class="footer-brand">
+        <div class="brand-logo footer-logo">
+          <div class="brand-badge-icon">
+            <span>PR</span>
+          </div>
+          <span class="brand-title">Puri Retno Mutia</span>
+        </div>
+        <p class="footer-desc">
+          Mahasiswi D3 Teknik Informatika PENS. Fokus merancang solusi backend yang aman, terstruktur, dan siap pakai.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <span class="footer-heading">Navigasi</span>
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#projects">Portofolio</a>
+        <a href="#experience">Pengalaman</a>
+      </div>
+
+      <div class="footer-links">
+        <span class="footer-heading">Kontak & Lokasi</span>
+        <span class="footer-text">Surabaya, Jawa Timur</span>
+        <span class="footer-text">[Belum diisi]</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Puri Retno Mutia. All rights reserved.</p>
+        <p class="footer-powered">Terinspirasi dari desain modern LamonganDev.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
